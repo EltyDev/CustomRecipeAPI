@@ -10,23 +10,20 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.Plugin;
 
 public class CustomShapedRecipe extends org.bukkit.scheduler.BukkitRunnable implements org.bukkit.event.Listener  {
 	
 	private HashMap<UUID, Boolean> players = new HashMap<UUID, Boolean>();
-	private Plugin plugin;
 	private ItemStack result;
 	private List<String> shapeStrings = new ArrayList<String>();
 	private Map<Integer, Character> shape = new HashMap<Integer, Character>();
 	private Map<Character, ItemStack> ingredients = new HashMap<Character, ItemStack>();
 	
-	public CustomShapedRecipe(ItemStack result, Plugin plugin) {
+	public CustomShapedRecipe(ItemStack result) {
 		
-		Bukkit.getServer().getPluginManager().registerEvents(this, plugin);
+		Bukkit.getServer().getPluginManager().registerEvents(this, Main.getPlugin(Main.class));
 		ingredients.put(' ', null);
 		this.result = result;
-		this.plugin = plugin;
 
 	}
 	
@@ -87,7 +84,7 @@ public class CustomShapedRecipe extends org.bukkit.scheduler.BukkitRunnable impl
 	
 	public void register() {
 		
-		this.runTaskTimer(plugin, 0, 1);
+		this.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 		
 	}
 	

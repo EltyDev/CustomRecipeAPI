@@ -11,20 +11,17 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.Plugin;
 
 public class CustomShapelessRecipe extends org.bukkit.scheduler.BukkitRunnable implements org.bukkit.event.Listener  {
 	
 	private Map<UUID, Boolean> players = new HashMap<UUID, Boolean>();
-	private Plugin plugin;
 	private ItemStack result;
 	private List<ItemStack> ingredients = new ArrayList<ItemStack>();
 	
-	public CustomShapelessRecipe(ItemStack result, Plugin plugin) {
+	public CustomShapelessRecipe(ItemStack result) {
 		
-		Bukkit.getServer().getPluginManager().registerEvents(this, plugin);
+		Bukkit.getServer().getPluginManager().registerEvents(this, Main.getPlugin(Main.class));
 		this.result = result;
-		this.plugin = plugin;
 
 	}
 	
@@ -60,7 +57,7 @@ public class CustomShapelessRecipe extends org.bukkit.scheduler.BukkitRunnable i
 			
 		}
 		
-		this.runTaskTimer(plugin, 0, 1);
+		this.runTaskTimer(Main.getPlugin(Main.class), 0, 1);
 		
 	}
 	
