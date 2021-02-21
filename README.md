@@ -12,5 +12,6 @@ API permettant la création de craft avec des ItemStack avant la 1.12 sous Spigo
 - 1.11.2 ✅
 ## Utilisation
 S'utiliser comme les classes [ShapedRecipe](https://helpch.at/docs/1.8/org/bukkit/inventory/class-use/ShapedRecipe.html) & [ShapelessRecipe](https://helpch.at/docs/1.8/org/bukkit/inventory/class-use/ShapelessRecipe.html) sauf qu'à la place d'utiliser les [Materials](https://helpch.at/docs/1.8.8/org/bukkit/class-use/Material)  on utilises les [ItemStacks](https://helpch.at/docs/1.8.8/org/bukkit/inventory/class-use/ItemStack).
+Voir [Wiki](https://github.com/Venodez/CustomRecipeAPI/wiki).
 
 
