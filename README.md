@@ -11,7 +11,7 @@ API permettant la création de craft avec des ItemStack avant la 1.12 sous Spigo
 - 1.11.1 ❔
 - 1.11.2 ❔
 ## Utilisation
-S'utiliser comme les classes "ShapedRecipe" & "ShapelessRecipe". Et pour l'activer, il suffit à la place de mettre 
+S'utiliser comme les classes [ShapedRecipe](https://helpch.at/docs/1.8/org/bukkit/inventory/class-use/ShapedRecipe.html) & [ShapelessRecipe](https://helpch.at/docs/1.8/org/bukkit/inventory/class-use/ShapelessRecipe.html). Et pour l'activer, il suffit à la place de mettre 
 ```java
 Bukkit.addRecipe(recipe);
 ```
